@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Email Validator</h1>
+<form method="post">
+    <label for="email">Enter Email Address:</label>
+    <input type="text" name="email" id="email" placeholder="Enter email..." required>
+    <button type="submit">Validate</button>
+</form>
+{% if email is not none %}
+    {% if is_valid %}
+        <p class="success">{{ email }} is a valid email address.</p>
+    {% else %}
+        <p class="error">{{ email }} is not a valid email address.</p>
+    {% endif %}
+{% endif %}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Test Your Regular Expressions</h1>
+<form action="/results" method="post">
+    <label for="test_string">Test String:</label>
+    <textarea name="test_string" id="test_string" rows="5" placeholder="Enter your test string here..." required></textarea>
+    <label for="regex_pattern">Regular Expression:</label>
+    <input type="text" name="regex_pattern" id="regex_pattern" placeholder="Enter your regex pattern..." required>
+    <button type="submit">Test Regex</button>
+</form>
+{% endblock %}
